@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  base-uri 'self';
+  object-src 'none';
+  frame-ancestors 'none';
+  upgrade-insecure-requests;
+  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com https://cdnjs.cloudflare.com;
+  style-src  'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com https://cdnjs.cloudflare.com https://fonts.googleapis.com;
+  img-src    'self' data: https://cdn.jsdelivr.net https://images.unsplash.com https://plus.unsplash.com;
+  font-src   'self' data: https://cdn.jsdelivr.net https://fonts.gstatic.com;
+  connect-src 'self';
+  frame-src  https://www.google.com https://maps.google.com;
+">
+
+
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+  <title>photogrpahe</title>  
+
+  <!-- CSS libs -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+
+<!-- HEADER (navbar + hero) -->
+<header class="site-header">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold logo-title" href="#">
+        <i class="bi bi-lightning-charge-fill me-2"></i>Tatouage
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#galerie">Galerie</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#avis">Avis</a></li>
+          <li class="nav-item"><a class="btn btn-outline-light btn-sm ms-lg-3" href="#contact">Prendre RDV</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-tattoo d-flex align-items-center">
+    <div class="container position-relative">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-9 text-center" data-aos="fade-up">
+          <h1 class="display-4 hero-title mb-3">Des tatouages qui racontent votre histoire</h1>
+          <p class="lead opacity-75 mb-4">
+            Ligne fine, réalisme, lettrage — hygiène irréprochable, création sur-mesure.
+          </p>
+          <div class="d-flex gap-3 justify-content-center">
+            <a href="#galerie" class="btn btn-light btn-lg"><i class="bi bi-images me-2"></i>Voir la galerie</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg"><i class="bi bi-calendar2-check me-2"></i>Réserver</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</header>
+
+<!-- SECTION 2 - PRÉSENTATION -->
+<section id="presentation" class="section-about py-6">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <!-- Visuel -->
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="about-photo ratio ratio-4x3 rounded-4 overflow-hidden shadow">
+          <!-- remplace l’image par la tienne -->
+          <img src="/img/tony-rocket-qtHKf9UkWvg-unsplash.jpg" alt="Studio de tatouage" class="w-100 h-100 object-fit-cover">
+        </div>
+
+        <!-- Badges styles -->
+        <ul class="list-inline mt-4 mb-0 about-tags">
+          <li class="list-inline-item badge rounded-pill ">Ligne fine</li>
+          <li class="list-inline-item badge rounded-pill ">Réaliste</li>
+          <li class="list-inline-item badge rounded-pill ">Lettrage</li>
+          <li class="list-inline-item badge rounded-pill ">Projet custom</li>
+        </ul>
+      </div>
+
+      <!-- Texte -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <span class="eyebrow text-uppercase">À propos</span>
+        <h2 class="display-6 mt-2 mb-3">Un travail soigné, une hygiène irréprochable</h2>
+        <p class="lead text-muted-ink">
+          Chaque projet est dessiné sur-mesure à partir de votre histoire. Consultation gratuite,
+          conseils sur le placement et le style, suivi de cicatrisation.
+        </p>
+
+        <!-- Points clés -->
+        <div class="row g-3 mt-4">
+          <div class="col-sm-6 d-flex">
+            <div class="feature-ink">
+              <i class="bi bi-shield-check"></i>
+              <div>
+                <h6>Hygiène & stérilisation</h6>
+                <p class="mb-0 small text-muted-ink">Matériel à usage unique, surface désinfectée entre chaque séance.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 d-flex">
+            <div class="feature-ink">
+              <i class="bi bi-award"></i>
+              <div>
+                <h6>Certifications</h6>
+                <p class="mb-0 small text-muted-ink">Formation hygiène/salubrité — normes en vigueur.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 d-flex">
+            <div class="feature-ink">
+              <i class="bi bi-brush"></i>
+              <div>
+                <h6>Création unique</h6>
+                <p class="mb-0 small text-muted-ink">Croquis validé ensemble avant réalisation.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 d-flex">
+            <div class="feature-ink">
+              <i class="bi bi-clock-history"></i>
+              <div>
+                <h6>Sur rendez-vous</h6>
+                <p class="mb-0 small text-muted-ink">Devis rapide — acompte en ligne possible.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="row text-center mt-4 g-3">
+          <div class="col-4">
+            <div class="stat-ink">
+              <span class="h3 d-block">8+</span>
+              <small class="text-muted-ink">années</small>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="stat-ink">
+              <span class="h3 d-block">1200+</span>
+              <small class="text-muted-ink">tatouages</small>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="stat-ink">
+              <span class="h3 d-block">4.9★</span>
+              <small class="text-muted-ink">avis moyens</small>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-light btn-lg mt-4">
+          <i class="bi bi-calendar2-check me-2"></i>Demander un devis
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 3 - GALERIE PREMIUM -->
+<section id="galerie" class="section-gallery-cards py-6">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="eyebrow text-uppercase">Portfolio</span>
+      <h2 class="display-6 mt-2">Mes réalisations</h2>
+      <p class="text-muted-ink">Cliquez sur une image pour l’agrandir</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="0">
+        <a href="./img/jasmin-chew-euwWHmSjCWk-unsplash.jpg" class="tattoo-card glightbox" >
+          <div class="tattoo-img">
+            <img src="./img/jasmin-chew-euwWHmSjCWk-unsplash.jpg"">
+          </div>
+        </a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+        <a href="./img/haley-lawrence-soxRbVfWVgk-unsplash.jpg" class="tattoo-card glightbox" >
+          <div class="tattoo-img">
+            <img src="./img/haley-lawrence-soxRbVfWVgk-unsplash.jpg" >
+          </div>
+        </a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+        <a href="./img/eduardo-vaccari-pIltvcnqsfU-unsplash.jpg" class="tattoo-card glightbox" >
+          <div class="tattoo-img">
+            <img src="./img/eduardo-vaccari-pIltvcnqsfU-unsplash.jpg" >
+          </div>
+        </a>
+      </div>
+
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+        <a href="./img/hayleigh-b-RwOHJXAAQ8w-unsplash.jpg" class="tattoo-card glightbox" >
+          <div class="tattoo-img">
+            <img src="./img/hayleigh-b-RwOHJXAAQ8w-unsplash.jpg">
+          </div>
+        </a>
+      </div>
+
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+        <a href="/img/mee-nee-cR7Jp3Mu3TA-unsplash.jpg" class="tattoo-card glightbox">
+          <div class="tattoo-img">
+            <img src="/img/mee-nee-cR7Jp3Mu3TA-unsplash.jpg">
+          </div>
+        </a>
+      </div>
+
+        <div class="col-12 col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+        <a href="./img/mieke-campbell-R-8NEiq_YQQ-unsplash.jpg" class="tattoo-card glightbox">
+          <div class="tattoo-img">
+            <img src="./img/mieke-campbell-R-8NEiq_YQQ-unsplash.jpg">
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 4 - SERVICES & TARIFS -->
+<section id="services" class="section-services py-6">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="eyebrow text-uppercase">Services & Tarifs</span>
+      <h2 class="display-6 mt-2">Créer votre projet sur-mesure</h2>
+      <p class="text-muted-ink">Devis précis en consultation — tarifs indicatifs ci-dessous.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Ligne fine -->
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="service-card h-100">
+          <div class="service-head">
+            <i class="bi bi-pencil-square"></i>
+            <h3>Ligne fine</h3>
+            <small>Minimaliste, précis, délicat</small>
+          </div>
+          <ul class="service-list">
+            <li><i class="bi bi-check2"></i> Micro-tattoos & symboles</li>
+            <li><i class="bi bi-check2"></i> Compositions florales</li>
+            <li><i class="bi bi-check2"></i> Silhouettes & constellations</li>
+          </ul>
+          <div class="service-price">
+            <span class="price">à partir de 80€</span>
+            <small class="text-muted-ink d-block">Croquis inclus — retouches mineures offertes</small>
+          </div>
+          <a href="#contact" class="btn btn-light w-100 mt-3"><i class="bi bi-calendar2-check me-2"></i>Demander un devis</a>
+        </div>
+      </div>
+
+      <!-- Réaliste -->
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-card h-100 featured">
+          <div class="service-head">
+            <i class="bi bi-camera"></i>
+            <h3>Réaliste</h3>
+            <small>Portraits, animaux, textures</small>
+          </div>
+          <ul class="service-list">
+            <li><i class="bi bi-check2"></i> Étude photo & placement</li>
+            <li><i class="bi bi-check2"></i> Ombres & détails poussés</li>
+            <li><i class="bi bi-check2"></i> Suivi de cicatrisation</li>
+          </ul>
+          <div class="service-price">
+            <span class="price">120€ / h</span>
+            <small class="text-muted-ink d-block">Pièces à la séance — devis estimatif avant session</small>
+          </div>
+          <a href="#contact" class="btn btn-light w-100 mt-3"><i class="bi bi-calendar2-check me-2"></i>Réserver</a>
+        </div>
+      </div>
+
+      <!-- Lettrage -->
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-card h-100">
+          <div class="service-head">
+            <i class="bi bi-type"></i>
+            <h3>Lettrage</h3>
+            <small>Scripts, gothique, signatures</small>
+          </div>
+          <ul class="service-list">
+            <li><i class="bi bi-check2"></i> Typo custom & calligraphie</li>
+            <li><i class="bi bi-check2"></i> Courbes adaptées au corps</li>
+            <li><i class="bi bi-check2"></i> Tests de tailles & variantes</li>
+          </ul>
+          <div class="service-price">
+            <span class="price">à partir de 60€</span>
+            <small class="text-muted-ink d-block">Maquette comprise — ajustements rapides</small>
+          </div>
+          <a href="#contact" class="btn btn-light w-100 mt-3"><i class="bi bi-calendar2-check me-2"></i>Demander un devis</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bandeau infos -->
+    <div class="row mt-5 g-3 align-items-center" data-aos="fade-up" data-aos-delay="250">
+      <div class="col-12 col-lg-8">
+        <div class="info-banner">
+          <i class="bi bi-info-circle me-2"></i>
+          <span>Un acompte peut être demandé pour bloquer la date. Les prix varient selon la taille, le placement et la complexité.</span>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 text-lg-end">
+        <a href="#contact" class="btn btn-outline-light"><i class="bi bi-chat-dots me-2"></i>Poser une question</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="avis" class="section-avis py-6">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="eyebrow text-uppercase">Témoignages</span>
+      <h2 class="display-6 mt-2">Ce que disent nos clients</h2>
+      <p class="text-muted-ink">Quelques retours fictifs illustrés</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Avis 1 -->
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="avis-card">
+          <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=300&h=300&fit=crop&crop=faces" alt="Claire Martin" class="avis-photo">
+          <h5 class="avis-nom">Claire Martin</h5>
+          <div class="avis-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="avis-text">"Tatouage incroyable, encore mieux que dans mon imagination. Accueil chaleureux et hygiène irréprochable."</p>
+        </div>
+      </div>
+
+      <!-- Avis 2 -->
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="avis-card">
+          <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=300&h=300&fit=crop&crop=faces" alt="Julien Robert" class="avis-photo">
+          <h5 class="avis-nom">Julien Robert</h5>
+          <div class="avis-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+          </div>
+          <p class="avis-text">"Super expérience ! Le lettrage est parfaitement réalisé et correspond exactement à ce que je voulais."</p>
+        </div>
+      </div>
+
+      <!-- Avis 3 -->
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="avis-card">
+          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=300&h=300&fit=crop&crop=faces" alt="Sophie Laurent" class="avis-photo">
+          <h5 class="avis-nom">Sophie Laurent</h5>
+          <div class="avis-stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="avis-text">"Travail minutieux, artiste à l'écoute et très créatif. Je reviendrai sans hésiter pour mon prochain tatouage."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 6 - CONTACT & HORAIRES -->
+<section id="contact" class="section-contact py-6">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="eyebrow text-uppercase">Contact</span>
+      <h2 class="display-6 mt-2">Venez nous voir</h2>
+      <p class="text-muted-ink">Prenez rendez-vous ou passez nous rencontrer directement au salon</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Infos -->
+      <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="contact-card h-100">
+          <h5><i class="bi bi-geo-alt-fill me-2"></i>Adresse</h5>
+          <p>123 Rue des Artistes, 75000 Paris</p>
+
+          <h5 class="mt-4"><i class="bi bi-telephone-fill me-2"></i>Téléphone</h5>
+          <p><a href="tel:+33123456789">06 00 00 00 00</a></p>
+
+          <h5 class="mt-4"><i class="bi bi-envelope-fill me-2"></i>Email</h5>
+          <p><a href="mailto:contact@inkstudio.fr">contact@inkstudio.fr</a></p>
+
+          <h5 class="mt-4"><i class="bi bi-clock-fill me-2"></i>Horaires</h5>
+          <ul class="list-unstyled mb-0">
+            <li>Lundi : Fermé</li>
+            <li>Mardi - Vendredi : 10h - 19h</li>
+            <li>Samedi : 10h - 18h</li>
+            <li>Dimanche : Fermé</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Carte -->
+      <div class="col-12 col-lg-8" data-aos="fade-up" data-aos-delay="100">
+        <div class="map-container h-100">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.999483748928!2d2.292292615674844!3d48.858373079287236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fdd1e5bfae7%3A0x421b1cb8f9d7f0c!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1690000000000"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER SIMPLE -->
+<footer class="site-footer-simple py-4">
+  <div class="container text-center">
+    <p class="mb-2 logo-title"><i class="bi bi-lightning-charge-fill me-2"></i>Ink Studio</p>
+    <p class="text-muted-ink small mb-2">
+      123 Rue des Artistes, Paris — 
+      <a href="tel:+33123456789" class="footer-link">01 23 45 67 89</a> — 
+      <a href="mailto:contact@inkstudio.fr" class="footer-link">contact@inkstudio.fr</a>
+    </p>
+    <div class="d-flex justify-content-center gap-3 mb-2 fs-5">
+      <a href="#" class="footer-social"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="footer-social"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="footer-social"><i class="bi bi-tiktok"></i></a>
+    </div>
+    <small class="text-muted-ink">© <span id="year"></span> Tatouage — Tous droits réservés</small>
+  </div>
+</footer>
+
+<!-- JS libs -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script src="./js/aos.js"></script>
+</body>
+</html>

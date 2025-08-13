@@ -1,0 +1,263 @@
+/* --- Polices globales --- */
+:root{
+  --font-body: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-title: 'Cinzel', Georgia, "Times New Roman", serif;
+}
+
+html, body { font-family: var(--font-body); color: #f2f2f2; background-color: #0e0e0f; }
+h1,h2,h3,.logo-title { font-family: var(--font-title); letter-spacing: .5px; }
+
+.navbar .nav-link { opacity:.9; }
+.navbar .nav-link:hover { opacity:1; }
+
+/* --- Hero tatouage --- */
+.hero-tattoo{
+  min-height: 92vh;
+  position: relative;
+  background: #000000 url('../img/tony-rocket-fVG0hzZLcJ8-unsplash.jpg') center/cover no-repeat fixed;
+  padding-top: 6rem; /* compense la navbar fixe */
+}
+.hero-tattoo::before{
+  content:"";
+  position:absolute; inset:0;
+  /* dégradé sombre pour lisibilité + légère texture */
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.233) 0%, rgba(10, 10, 10, 0.75) 100%);
+}
+.hero-tattoo .container{ position: relative; z-index: 1; }
+
+.hero-title{
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+/* Boutons */
+.btn{ border-radius: .8rem; padding:.85rem 1.25rem; }
+.btn-outline-light{ border-width: 2px; }
+
+/* Petit tweak mobile */
+@media (max-width: 576px){
+  .hero-title{ font-size: 1.8rem; }
+}
+
+
+/* Spacing util */
+.py-6{ padding-top:4.5rem; padding-bottom:4.5rem; }
+
+.section-about{ background: #00000023; }
+
+/* Titres / textes */
+.eyebrow{ letter-spacing:.12em; font-size:.8rem; opacity:.8; }
+.text-muted-ink{ color:#b7b7b9; }
+
+/* Visuel */
+.about-photo img{ filter: grayscale(20%) contrast(1.05); }
+
+/* Badges tag */
+.about-tags .badge{
+  background: rgba(255,255,255,.06) !important;
+  color:#e9e9ea; border:1px solid rgba(255,255,255,.12);
+}
+
+/* Features */
+.feature-ink i{
+  font-size:1.4rem; margin-right:.75rem;
+}
+.feature-ink h6{ margin:0; font-family: var(--font-title); }
+
+/* Stats */
+.stat-ink{
+  background: rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:1rem; padding:.9rem 0;
+}
+.stat-ink span{ font-family: var(--font-title); }
+
+
+.section-gallery-cards{
+  background: #0f0f11;
+}
+
+.tattoo-card{
+  display: block;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.tattoo-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.6);
+}
+
+.tattoo-img{
+  position: relative;
+  overflow: hidden;
+  height: 320px; /* Hauteur fixe */
+}
+
+.tattoo-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Remplit la card sans déformer l'image */
+  transition: transform .5s ease;
+  display: block;
+}
+
+.tattoo-card:hover .tattoo-img img{
+  transform: scale(1.08); /* Zoom visuel */
+}
+
+
+.section-services{ background:#101012; }
+
+/* Card */
+.service-card{
+  background:#1a1a1d;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:1.2rem;
+  padding:1.4rem;
+  box-shadow:0 6px 20px rgba(0,0,0,.35);
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.service-card:hover{
+  transform: translateY(-6px);
+  box-shadow:0 12px 28px rgba(0,0,0,.5);
+  border-color: rgba(255,255,255,.18);
+}
+.service-card.featured{
+  background: linear-gradient(180deg,#202024 0%, #1a1a1d 60%);
+  border-color: rgba(255,255,255,.18);
+}
+
+/* Head */
+.service-head{
+  display:flex; flex-direction:column; align-items:flex-start;
+  gap:.25rem; margin-bottom:1rem;
+}
+.service-head i{
+  font-size:1.6rem;
+}
+.service-head h3{
+  font-family: var(--font-title); margin:0;
+}
+.service-head small{ color:#b7b7b9; }
+
+/* List */
+.service-list{
+  list-style:none; padding:0; margin:0 0 1rem 0;
+}
+.service-list li{
+  display:flex; align-items:flex-start; gap:.6rem;
+  padding:.35rem 0; color:#e9e9ea;
+}
+.service-list i{ margin-top:.15rem; }
+
+/* Price */
+.service-price .price{
+  font-size:1.25rem; font-weight:700; font-family: var(--font-title);
+}
+
+/* Info banner */
+.info-banner{
+  background: rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  padding:.9rem 1rem;
+  border-radius:.9rem;
+  display:flex; align-items:center;
+}
+
+.section-avis{
+  background: #0f0f11;
+}
+
+.avis-card{
+  background: #1a1a1d;
+  border-radius: 1rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  height: 100%;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.avis-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.6);
+}
+
+.avis-photo{
+  width: 80px;
+  height: 80px;
+  object-fit: cover;       /* Remplit tout le cadre */
+  object-position: center; /* Centre sur le visage */
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.1);
+  margin-bottom: .8rem;
+}
+
+.avis-nom{
+  font-family: var(--font-title);
+  color: #fff;
+  margin-bottom: .3rem;
+}
+
+.avis-stars{
+  color: #ffcc00;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.avis-text{
+  font-style: italic;
+  color: #b7b7b9;
+  font-size: .95rem;
+}
+
+
+.section-contact{
+  background: #101012;
+}
+
+.contact-card{
+  background: #1a1a1d;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+.contact-card h5{
+  font-family: var(--font-title);
+  color: #fff;
+}
+.contact-card p, 
+.contact-card li,
+.contact-card a{
+  color: #b7b7b9;
+  margin-bottom: 0.4rem;
+  text-decoration: none;
+}
+.contact-card a:hover{
+  color: #fff;
+}
+
+.map-container{
+  border-radius: 1rem;
+  overflow: hidden;
+  min-height: 300px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.site-footer-simple{
+  background: #6e6e6e1e;
+}
+.site-footer-simple .footer-link{
+  color: #b7b7b9;
+  text-decoration: none;
+}
+.site-footer-simple .footer-link:hover{
+  color: #fff;
+}
+.footer-social{
+  color: #e9e9ea;
+}
+.footer-social:hover{
+  color: #fff;
+}
